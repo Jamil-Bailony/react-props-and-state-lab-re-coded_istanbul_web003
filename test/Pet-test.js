@@ -73,7 +73,7 @@ describe('<Pet />', () => {
         const wrapper = shallow(<Pet pet={FEMALE_CAT} />);
         expect(
           wrapper.find('button.ui.primary.button').length === 1 &&
-            wrapper.find('button.ui.disabled.button').length === 0
+            wrapper.find('button.ui.disabled.button').length === 1
         ).to.be.true;
       });
 
@@ -98,7 +98,7 @@ describe('<Pet />', () => {
         const wrapper = shallow(<Pet pet={{ ...FEMALE_CAT, isAdopted: true }} />);
         expect(
           wrapper.find('button.ui.disabled.button').length === 1 &&
-            wrapper.find('button.ui.primary.button').length === 0
+            wrapper.find('button.ui.primary.button').length === 1
         ).to.be.true;
       });
 
